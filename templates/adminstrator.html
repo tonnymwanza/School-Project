@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        {%if user.is_authenticated and user.is_superuser%}
+        <p>this is the admin page</p>
+        {%else%}
+        <p>Your are not an admin. Log in to the student or teacher page.</p>
+        {%endif%}
+    </body>
+</html>

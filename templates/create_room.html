@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <h4>Create room</h4>
+        </div>
+        <section>
+                <form method="POST" action="create_room">
+                    {% csrf_token %}
+                    <div>
+                        <label for="host">Host</label>
+                        {{fom.host}}<br>
+                    </div>
+                    <div>
+                        <label for="room_name">The room name</label>
+                        {{fom.room_name}}<br>
+                    </div>
+                    <div>
+                        <label for="topic">Your Topic</label>
+                        {{fom.topic}}<br>
+                    </div>
+                    <div>
+                        <label for="room_description">Description of the room</label>
+                        {{fom.room_description}}<br>
+                    </div>
+                    <input type="submit" value="Create room">
+                </form>
+            </div>
+        </section>
+    </body>
+</html>

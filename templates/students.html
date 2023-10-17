@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <!--this is the javascript part
+        <script>
+            function getanswer()
+            {
+                var first_ans=document.getElementById("answer_one").value;
+                var second_ans=document.getElementById("answer_two").value;
+                var third_ans=document.getElementById("answer_three").value;
+                var fourth_ans=document.getElementById("answer_four").value;
+                document.write("this is the first answer: "+first_ans+"<br>");
+                document.write("this is the second answer: "+second_ans+"<br>");
+                document.write("this is the third answer: "+third_ans+"<br>");
+                document.write("this is the fourth answer: "+fourth_ans+"<br>");
+            }
+            the name has been "{{option.id}}"
+        </script>
+    -->
+        <title></title>
+    </head>
+    <body id="back">
+        <h4>Student page</h4>
+        <header>
+            <div id="headprof">
+                Welcome {{user.username}} / <a href="{% url 'student_profile' %}">Student Profile</a> / <a href="{% url 'logout' %}">Logout</a>
+            </div>
+        </header>
+        <h3>Questions</h3>
+
+        <div>
+            <form action="students" method="POST">
+                {%csrf_token%}
+            {% for option in obj %}
+            <table>
+                <tr>
+                    <td>{{option.id}} {{option.question}}</td>
+                </tr>
+                <tr>
+                    <td><input {% if option.answer_one.value %}checked{% endif %} type="radio" id="answer_one" name="{{option.id}}" value="{{option.answer_one}}"> {{option.answer_one}}</td>
+                </tr>
+                <tr>
+                    <td><input {% if option.answer_two.value %}checked{% endif %} type="radio" id="answer_two" name="{{option.id}}" value="{{option.answer_two}}">{{option.answer_two}}</td>
+                </tr>
+                <tr>
+                    <td><input {% if option.answer_three.value %}checked{% endif %} type="radio" id="answer_three" name="{{option.id}}" value="{{option.answer_three}}">{{option.answer_three}}</td>
+                </tr>
+                <tr>
+                    <td><input {% if option.answer_four.value %}checked{% endif %} type="radio" id="answer_four" name="{{option.id}}" value="{{option.answer_four}}">{{option.answer_four}}</td>
+                </tr><br> 
+            </table>
+            {%endfor%}
+            <input type="submit" value="submit assignment">
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+            </form>
+        </div>
+</html>

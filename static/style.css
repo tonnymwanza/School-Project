@@ -1,0 +1,54 @@
+
+#passbody{
+    padding-bottom: 80px;
+    background-color: aqua;
+}
+
+.bodyback{
+    background-image: url(assets/img/course-details.jpg);
+    padding: 50px;
+    line-height: 50px;
+    font-style: italic;
+}
+
+#headprof{
+    font-weight: 14px;
+    color: whitesmoke;
+    text-decoration: underline;
+    font-size: 17px;
+    background-color: #858796;
+    padding-left: 10px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#navdesign{
+    padding-right: 10px;
+    text-align: right;
+    font-weight: 300;
+    font-size: small;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background-color: #858796;
+    color: whitesmoke;
+}
+
+#back{
+    background-color: aqua;
+}
+
+.profile_edit{
+    padding-right: 10px;
+    text-align: left;
+    font-weight: 300;
+    font-size: small;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background-color: #858796;
+}
+
+
+#topics{
+    background-color: grey;
+}
+

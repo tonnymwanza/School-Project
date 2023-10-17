@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <form method="POST" action="delete_room">
+                {% csrf_token %}
+                <p>Are you sure you want to delete the room <b>"{{room.topic}}"</b>?</p><br>
+                <a href="{{request.META.HTTP_REFERER}}">Go Back</a><br>
+                <input type="submit" value="delete room">
+            </form>
+        </div>
+    </body>
+</html>

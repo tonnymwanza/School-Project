@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <div>
+            <div>
+                <h4>Available Topics:-</h4>{{all_topics}}
+            </div>
+            <section>
+                <div>
+                    {% for ob in obj %}
+                    {{ob.id}}<ul>
+                        <li><a href="">{{ob.topic}}</a> </li>
+                    </ul>
+                    {%  endfor %}
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

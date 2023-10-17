@@ -1,0 +1,20 @@
+/*room page styling */
+/*width: 300px;*/
+#browse-bar {
+    display: grid;
+    padding-top: 20px;
+    position: sticky;
+    padding: 1rem;
+    font-family: sans-serif;
+    word-spacing: 10px; 
+    line-height: 50px;
+    font-size: 20px;
+    width:300px;
+    height: 100px;
+    color: whitesmoke;
+}
+
+
+#main-body{
+    background-color: rgba(0, 0, 0, 0.418);
+}
